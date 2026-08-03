@@ -1,0 +1,24 @@
+# Dependencies
+node_modules
+
+# Compiled output (CDK builds from .ts)
+*.js
+!jest.config.js
+*.d.ts
+
+# CDK
+.cdk.staging
+cdk.out
+
+# Secrets / local env — never commit these
+.env
+.env.*
+*.pem
+*.key
+aws.json
+credentials
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
