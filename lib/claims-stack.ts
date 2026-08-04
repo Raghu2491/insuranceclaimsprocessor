@@ -58,7 +58,7 @@ export class ClaimsStack extends cdk.Stack {
       environment: { BUCKET_NAME: this.claimsBucket.bucketName },
     });
     // Grants s3:PutObject on the bucket (needed to sign a PUT URL).
-    this.claimsBucket.grantPut(presignFn);
+    this.claimsBucket.grantPut(presignFn, 'claims/*');
 
     // ---- HTTP API: GET /upload-url ----
     const httpApi = new apigw.HttpApi(this, 'ClaimsApi', {
